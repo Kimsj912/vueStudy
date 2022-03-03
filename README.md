@@ -13,27 +13,32 @@
 <br><br>
 # 사용방법
   vue를 설치하는 방법으론 크게 2가지가 있다. Script와 npm인데, 나는 그 중 npm을 이용한 사용방법을 적고자한다.
-  0. 기본 준비사항
+  1. 기본 준비사항
     - node.js 설치
     - vscode 설치
+    - git clone
+      - git bash를 키고 아래 명령어를 입력한다.
+      ```
+        git clone https://github.com/Kimsj912/vueStudy.git
+      ```
 
-  1. 나의 레포짓토리로 이동하기
+  2. 나의 레포짓토리로 이동하기
   ```
     $ cd 이름/주차
     // ex.
     cd Sujeong/firstweek
   ```
-  2. vue설치
+  3. vue설치
   ```
     $ npm install vue
   ``` 
 
-  3. vue cli 설치
+  4. vue cli 설치
   ```
     $ npm install -g @vue/cli
   ```
   
-  4. 페이지 시작하기
+  5. 실행하기
   ```
     $ npm run serve
   ```
