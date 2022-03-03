@@ -3,10 +3,10 @@
   vue.js를 공부하며 간단한 예제들을 기록해보고자 합니다.
 
 # 기간
-  2022-03-02 ~ 
+  - 2022-03-02 ~ 
   
 # 관련 레포짓토리
-  [javascriptWithStudy](https://github.com/Kimsj912/javascriptWithStudy, "자바스크립트 스터디원들과 함께한 레포짓토리")
+  - 기존 자바스크립트 스터디 레포짓토리 : [javascriptWithStudy](https://github.com/Kimsj912/javascriptWithStudy, "자바스크립트 스터디원들과 함께한 레포짓토리")
 
 # 사용방법
   vue를 설치하는 방법으론 크게 2가지가 있다. Script와 npm인데, 나는 그 중 npm을 이용한 사용방법을 적고자한다.
