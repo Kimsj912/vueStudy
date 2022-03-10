@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue example</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div id="app">
+			<ul v-for="item in items">
+				<li class="info">강의명: {{ item.name }}</li>
+				<li class="info">가격: {{ item.price }}</li>
+				<li class="info">수강갯수: {{ item.count }}</li>
+				가격: <input class="text-box" type="text" v-model="item.price" />
+				수강갯수: <input class="text-box" type="text" v-model="item.count" />
+			</ul>
+			<br />
+			<span>
+				총 가격: {{ totalPrice }}<br />
+				세금 가격: {{ taxPrice }}
+			</span>
+		</div>
+
+		<script src="./main.js"></script>
+	</body>
+</html>
