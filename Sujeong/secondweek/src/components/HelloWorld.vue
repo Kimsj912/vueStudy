@@ -1,6 +1,11 @@
 <template>
   <div>
-      <p>TODO - LIST</p>
+      <h3>TODO - LIST</h3>
+      <div class="buttonGroup">
+        <input type="text" v-model="inputVal">
+        <button v-on:click="addItem">새 항목</button>
+        <button>삭제</button>
+      </div>
       <ul>
         <li
           v-for="item in li" 
@@ -27,20 +32,21 @@ export default {
   },
   data() {
     return {
+      inputVal : "",
         li : [
         {
           id: 0,
-          content:"공부하자",
+          content:"뷰강의",
           checked : false,
         },
         {
           id: 1,
-          content:"테스트",
+          content:"자바스크립트 강의",
           checked : false,
         },
         {
           id: 2,
-          content:"222",
+          content:"리액트 강의",
           checked : false,
         },
       ]
@@ -50,6 +56,14 @@ export default {
     checkingItem(index) {
       this.li[index].checked = !this.li[index].checked;
       console.log(this.li);
+    },
+    addItem(){
+      let newId = this.li[-1].id +1;
+      this.li.push({
+        id: newId,
+        content: this.inputVal,
+        checked:false 
+      });
     }
   },
 }
@@ -64,5 +78,18 @@ li {
   margin: 10px;
   width: 100%;
 }
-
+h3{
+  background: white;
+  padding: 2rem;
+  font-weight: bolder;
+}
+.buttonGroup{
+  text-align: right;
+}
+.buttonGroup>button{
+  margin-left: 10px;
+  background: #009933;
+  color: white;
+  border-radius: 10%;
+}
 </style>
