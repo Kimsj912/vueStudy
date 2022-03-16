@@ -1,11 +1,6 @@
 <template>
   <div>
       <h3>TODO - LIST</h3>
-      <div class="buttonGroup">
-        <input type="text" v-model="inputVal">
-        <button v-on:click="addItem">새 항목</button>
-        <button>삭제</button>
-      </div>
       <ul>
         <li
           v-for="item in li" 
@@ -57,14 +52,6 @@ export default {
       this.li[index].checked = !this.li[index].checked;
       console.log(this.li);
     },
-    addItem(){
-      let newId = this.li[-1].id +1;
-      this.li.push({
-        id: newId,
-        content: this.inputVal,
-        checked:false 
-      });
-    }
   },
 }
 </script>
@@ -82,14 +69,5 @@ h3{
   background: white;
   padding: 2rem;
   font-weight: bolder;
-}
-.buttonGroup{
-  text-align: right;
-}
-.buttonGroup>button{
-  margin-left: 10px;
-  background: #009933;
-  color: white;
-  border-radius: 10%;
 }
 </style>
