@@ -1,9 +1,8 @@
 <template>
     <div class="wrapBox">
         <p>
-            <span class="index">{{item.id}}</span>
-            <span class="content">{{item.content}}</span>
             <input type="checkbox" :value="item.checked" v-on:click="onClickedBox"/>
+            <span class="content"> {{item.content}}</span><span class="index">(강의번호 : {{item.id}})</span>
         </p>   
     </div>
 </template>
@@ -28,7 +27,12 @@ export default {
 <style>
     .wrapBox{
         background-color: beige;
-        border-radius: 30%;
+        border-radius: 10%;
+        text-align: left;
         
     }
+    p{
+        text-decoration: underline;
+    }
+
 </style>
