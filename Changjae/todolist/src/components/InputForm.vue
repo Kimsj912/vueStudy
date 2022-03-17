@@ -12,7 +12,18 @@ export default {
 	}),
 	methods: {
 		onClick() {
-			this.$emit("interface", this.value)
+			const newTodo = {
+				id: this.todos.length + 1,
+				content: this.value,
+				checked: false
+			};
+			this.$store.commit("addTodoItem", newTodo);
+			this.newTodo = "";
+		}
+	},
+	computed: {
+		todos() {
+			return this.$store.state.todos;
 		}
 	}
 }
