@@ -37,33 +37,20 @@ export default {
     }
   },
   methods: {
-    checkingItem(inputId) {
-      this.$store.state.li.forEach(e=>{
-        if(e.id===inputId) e.checked = !e.checked;
-      });
+    checkingItem(inputId){
+      this.$store.commit("checkingItem",inputId);
     },
     setDone(){
-      this.$store.state.li.forEach(e => {
-        if(e.checked) e.isdone = !e.isdone;        
-      });
+      this.$store.commit("setDone");
     },
-    addItem(){
+    addItem (){
       if(this.inputVal.trim().length==0) this.inputVal="";
-      else{
-        let d = new Date();
-        this.$store.state.li.push({
-          id: d.getTime(),
-          content: this.inputVal,
-          checked:false,
-          isdone:false,
-        });
-        this.inputVal="";
-      }
+      else this.$store.commit("addItem",this.inputVal);
+      this.inputVal="";
     },
     delItem(){
-      this.$store.state.li = this.$store.state.li.filter((e)=>e.checked===false);
+      this.$store.commit("delItem");
     }
-
   },
 }
 </script>

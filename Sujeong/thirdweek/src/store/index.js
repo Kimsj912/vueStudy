@@ -26,7 +26,33 @@ export const store = new Vuex.Store({
         ]
     
     },
+    mutations:{
+        checkingItem(state, inputId) {
+            state.li.forEach(e=>{
+                if(e.id===inputId) e.checked = !e.checked;
+            });
+        },
+        setDone(state){
+            state.li.forEach(e => {
+                if(e.checked) {
+                    e.isdone = !e.isdone;        
+                    e.checked = !e.checked;
+                }
+            });
+        },
+        addItem(state, inputVal){
+            let d = new Date();
+            state.li.push({
+                id: d.getTime(),
+                content: inputVal,
+                checked:false,
+                isdone:false,
+            })
+        },
+        delItem(state){
+            state.li = state.li.filter((e)=>e.checked===false);
+        },
+    },
     getters:{},
-    mutations:{},
     actions:{},
 })
