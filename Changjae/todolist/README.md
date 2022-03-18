@@ -1,4 +1,4 @@
-# secondweek
+# todolist
 
 ## Project setup
 ```
